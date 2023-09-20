@@ -1,0 +1,23 @@
+.imgsize {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-body {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    width: 70%;
+    margin-left: 250px;
+}
+.card-text {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    margin: 30px auto;
+    padding: 40px;
+}
+.card-text h3 {
+    margin-top: 20px;
+}

@@ -1,0 +1,196 @@
+* {
+    font-family: 'Sarabun', sans-serif;
+}
+
+.custom-div2 {
+    background-color: rgba(255, 205, 0, 1.0);
+    height: 140px;
+    position: relative;
+    top: -10px;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    margin-top: 100px;
+    /* border: 1px solid ; */
+}
+
+.custom-menu {
+    display: block;
+    margin-top: 25px;
+    margin: 1%;
+}
+
+.custom-menu-item {
+    margin: 1% 25px;
+}
+
+.custom-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    margin: 10px;
+}
+
+.custom-footer {
+    background-color: rgba(255, 205, 0, 1.0);
+    padding: 40px;
+    text-align: center;
+}
+
+.imgdog {
+    height: 10%;
+    width: 45%;
+    border-radius: 2%;
+    box-shadow: 5px 5px 20px grey;
+    margin-top: -100px;
+}
+
+.colorinimg {
+    width: 100%;
+}
+
+.custom-menu {
+    margin-top: 50px;
+}
+
+.right-align-text {
+    text-align: right;
+    padding: 5%;
+    margin: 5%;
+    margin-top: -70px;
+}
+
+.block {
+    width: fit-content;
+    margin-left: 300px;
+    margin-top: -110px;
+}
+
+.col-7 {
+    width: 20px;
+}
+
+.help {
+    margin-left: 1200px;
+    margin-top: -100px;
+}
+
+.dog {
+    margin-left: 700px;
+    margin-top: 40px;
+}
+
+.container-img {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 70px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+/* .container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: -10px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+}
+
+.card-body img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    /* object-position: center center; */
+/* } */
+
+.card-text li {
+    padding: 1px;
+} */
+
+.custom-menu button {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.length_dog {
+    margin-left: -28px;
+}
+
+.btn-light {
+    border: 1px solid gray;
+}
+
+.text {
+    width: 100px;
+}
+
+.news {
+    margin-left: 650px;
+    margin-top: -10px;
+}
+
+.detail {
+    margin-left: 300px;
+}
+
+.container-fluid p {
+    margin-left: 1000px;
+    margin-top: 17px;
+}
+/* .card-img-top img{
+
+}
+.card-body img{
+    width: 315px;
+    height: 150px;
+    object-fit: cover;
+} */
+.imgsize {
+    width: 250px;
+    height: 200px;
+    object-fit: scale-down;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    margin-left: 21px;
+}
+.card-body {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    width: 70%;
+    margin-left: 250px;
+    margin-top: 70px;
+    gap: 1%;
+    
+   
+    
+}
+.card-text {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height:400px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #FFFAF6;
+}
+.card-text h3 {
+    margin-top: 20px;
+}

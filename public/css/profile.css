@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+.menu p{
+    margin-right: 50px;
+    font-size: 20px;
+}
+.logo a{
+    margin-left: 30px;
+}
+ .logo img{
+    margin-left: 0px;
+    width: 80px;
+    height: 80px;
+
+
+ }.menu button{
+    font-size: 18px;
+
+    margin-left: 20px;
+
+
+
+ }
+
+ .menu a{
+    color: black;
+    text-decoration: none;
+ }
+ .container {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+
+
+
+ }
+
+ .infomember h3 {
+    margin-top: 20px;
+    margin-left: 210px;
+ }
+.menu {
+    margin-left: -50px;
+}
+
+
+.edit {
+    margin-top: 140px;
+    margin-left: 740px;
+}
+
+.container2 {
+
+    margin-top: 10px;
+    display: flex;
+    margin-left: 210px;
+    margin-right: 150px;
+    background-color: rgb(255, 253, 199);
+    border-radius: 10px;
+    height: 260px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: absolute;
+    top: -60px;
+
+}
+
+.container2 img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.container2 label{
+    margin-top: 17px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.container2 input{
+    width: 280px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+.address{
+
+    margin-top: -240px;
+    margin-left: 450px;
+}
+
+.form {
+    margin-left: 80px;
+
+
+}
+.content {
+    background-color:rgba(255,205,0,1.0);
+    height: 140px;
+    position: relative;
+    margin-top: 60px;
+
+
+
+
+
+}
+
+
+.address input{
+    margin-right: 100px;
+}
+
+
+nav img{
+    width: 100px;
+    height: 80px;
+}
+
+nav p{
+    font-size: 20px;
+    margin-left: 110px;
+    margin-top: -55px;
+}
+
+
+.container3 {
+   background-color:rgba(255,205,0,1.0) ;
+    margin-top: 190px;
+    height: 100px;
+}
+
+.container3 p{
+    font-size: 20px;
+    margin-left: 510px;
+    margin-top: 200px;
+}
+
+a button {
+    margin-left: 1120px;
+
+}
