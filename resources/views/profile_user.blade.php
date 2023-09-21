@@ -5,7 +5,6 @@
         <ul class="menu">
             <button class="btn btn-warning" ><li><a href="/history/post">ประวัติการโพสต์</a></li></button>
             <button class="btn btn-warning"><li><a href="/success">ประวัติการรับเลี้ยง</a></li></button>
-
             <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();"> <button>{{ __('ออกจากระบบ') }}</button>

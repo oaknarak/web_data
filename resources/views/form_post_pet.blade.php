@@ -2,7 +2,7 @@
 @section('content')
     <div class="row pt-2 mx-5">
         <div class="col-12">
-            <div class="h4 text-center">โพสต์หาบ้านให้สัตว์</div>
+            <div class="h4 text-center pt-2">โพสต์หาบ้านให้สัตว์</div>
             @if ($errors->any())
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <ul>

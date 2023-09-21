@@ -58,7 +58,7 @@
 </div>
 </div>
 <div class="help">
-<button class="btn btn-outline-dark"><a href="#">โพสต์หาบ้านให้สัตว์</a></button>
+<button class="btn btn-outline-dark"><a href="/form/post/pet">โพสต์หาบ้านให้สัตว์</a></button>
 </div> 
 </div>
 </div>
@@ -72,7 +72,7 @@
         <a href="/detail/dog/{{$dog->id}}"><img class="imgsize" src="{{asset('storage/Image/'.$dog->pet_photo)}}"  ></a>
         <h3>{{$dog->name}}</h3>
         <p>{{$dog->gender}}</p>
-        <a href="/detail/dog/{{$dog->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
+        {{-- <a href="/detail/dog/{{$dog->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}
             <div class="card-footer">
                 <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$dog->created_at)}}</small>
             </div>

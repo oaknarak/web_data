@@ -18,7 +18,9 @@
             </div>
         </div>
         @empty
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
             ไม่มีข้อมูล
+        </div>
         @endforelse
     </div>
 @endsection

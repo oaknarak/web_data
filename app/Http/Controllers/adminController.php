@@ -59,9 +59,8 @@ class adminController extends Controller
 
 
     public function form_post(){
-        $post=Post::all();
         $post_types=Post_type::all();
-        return view('form_post',compact('post','post_types'));
+        return view('form_post',compact('post_types'));
     }
     public function create_post(Request $request){
         $request->validate([
