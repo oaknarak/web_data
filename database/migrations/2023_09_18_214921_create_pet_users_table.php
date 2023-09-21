@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('pet_id')->references('id')->on('pets');
             $table->unsignedBigInteger('adopt_id');
             $table->foreign('adopt_id')->references('id')->on('users');
+            $table->integer('selected')->default('0');
             $table->timestamps();
             $table->softDeletes();
         });
