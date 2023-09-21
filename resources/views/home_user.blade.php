@@ -41,24 +41,20 @@
 <div class="news">
     <h3>ข้อมูลข่าวสาร</h3>
 </div>
-<div class="container-img">
-    <div class="container-card">
-        @forelse ($news_posts as $news_post)
-        <div class="card-body">
-            <div class="card-text">
-                <a href="/detail/post/{{$news_post->id}}"><img src="{{asset('storage/Image/'.$news_post->photo)}}" class="card-img-top" ></a>
-                <h3>{{$news_post->header}}</h3>
-                <p>{{$news_post->detail}}</p>
-                <a href="/detail/post/{{$news_post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
-                <div class="card-footer">
-                    <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$news_post->created_at)}}</small>
-                </div>
+<div class="card-body">
+    @forelse ($news_posts as $news_post)
+        <div class="card-text">
+        <a href="/detail/dog/{{$news_post->id}}"><img class="imgsize" src="{{asset('storage/Image/'.$news_post->photo)}}"  ></a>
+        <h3>{{$news_post->header}}</h3>
+        <p>{{$news_post->type}}</p>
+        <a href="/detail/dog/{{$news_post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
+            <div class="card-footer">
+                <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$news_post->created_at)}}</small>
             </div>
         </div>
-        @empty
-            ไม่มีข้อมูล
-        @endforelse
-    </div>
+    @empty
+        ไม่มีข้อมูล
+    @endforelse
 </div>
     {{-- <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
         @forelse ($news_posts as $news_post)

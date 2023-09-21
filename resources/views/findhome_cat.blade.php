@@ -65,25 +65,20 @@
     <div class="news">
         <h3>หาบ้านให้น้องแมว</h3>
     </div>
-    <div class="container-img">
-        <div class="container-card">
-            @forelse ($cats as $cat)
-            <div class="card-body">
-                <div class="card-text">
-                    <a href="/detail/cat/{{$cat->id}}"><img src="{{asset('storage/Image/'.$cat->pet_photo)}}" class="card-img-top" ></a>
-                    <h3>{{$cat->name}}</h3>
-                    <p>{{$cat->gender}}</p>
-
-                    <a href="/detail/cat/{{$cat->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$cat->created_at)}}</small>
-                    </div>
+    <div class="card-body">
+        @forelse ($cats as $cat)
+            <div class="card-text">
+            <a href="/detail/dog/{{$cat->id}}"><img class="imgsize" src="{{asset('storage/Image/'.$cat->pet_photo)}}"  ></a>
+            <h3>{{$cat->name}}</h3>
+            <p>{{$cat->gender}}</p>
+            <a href="/detail/dog/{{$cat->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
+                <div class="card-footer">
+                    <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$cat->created_at)}}</small>
                 </div>
             </div>
-            @empty
-                ไม่มีข้อมูล
-            @endforelse
-        </div>
+        @empty
+            ไม่มีข้อมูล
+        @endforelse
     </div>
 @endsection
 

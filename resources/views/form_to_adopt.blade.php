@@ -52,8 +52,12 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="yes" id="consentCheckbox" required>
-                    <label class="form-check-label" for="form_privacy">
-                        ท่านได้ยอมรับในการเก็บข้อมูลส่วนตัวของท่านกับทางเรา
+                    <label class="form-check-label" for="form_privacy">ท่านได้
+                        <a href="https://drive.google.com/file/d/1HT374siniqVodGquFOdHzl7YVW7Tb_Kt/view?fbclid=IwAR1EYlBJ6gVMBLyyTyHD4uq0bOGGn
+                                kneDVq8plra5DHDX-7iB9IORYsooPY">
+                            ยอมรับเงื่อนไขและข้อตกลง
+                        </a>
+                        ในการเก็บข้อมูลส่วนตัวของท่านกับทางเรา
                     </label>
                 </div>
                 <div class="mb-3">
