@@ -2,6 +2,16 @@
 @section('content')
     <div class="row mx-5">
         <div class="col-12">
+            @if ($errors->any())
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="h4 text-center">แก้ไขโพสต์</div>
             <form action="/update/post/{{$post->id}}" method="post" enctype="multipart/form-data" class="needs-validation">
                 @csrf
@@ -26,7 +36,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="photo" class="form-label">รูปภาพประกอบ: </label>
-                    <input type="file" name="photo" class="form-control" id="image-input" required >
+                    <input type="file" name="photo" class="form-control" id="image-input" >
                 </div>
                 <div class="mb-3">
                     <div class="text-center">

@@ -26,24 +26,30 @@
             </ul>
         </nav>
         <h1>Student Management</h1>
-        <h2>Add Student</h2>
-        <form action="/students/insert" method="POST">
+        <h2>Edit Form Student</h2>
+        <form action="/students/update/{{$student_update->id}}" method="POST">
             @csrf
+            <label for="stu_id">Student ID:</label><br>
+            <input type="text" name="stu_id" value="{{$student_update->id}}" readonly><br>
             <label for="stu_name">Name:</label><br>
-            <input type="text" name="stu_name"><br>
+            <input type="text" name="stu_name" value="{{$student_update->stu_name}}"><br>
             <label for="age">Age:</label><br>
-            <input type="text" name="age"><br>
+            <input type="text" name="age" value="{{$student_update->age}}"><br>
             <label for="age">Grade:</label><br>
             <select name="grade">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="F">F</option>
+                <option value="A" @if($student_update->grade == "A") selected @endif>A</option>
+                <option value="B" @if($student_update->grade == "B") selected @endif>B</option>
+                <option value="C" @if($student_update->grade == "C") selected @endif>C</option>
+                <option value="D" @if($student_update->grade == "D") selected @endif>D</option>
+                <option value="F" @if($student_update->grade == "F") selected @endif>F</option>
             </select><br>
-            <button type="submit" id="submit">Add Student</button>
+            <button type="submit" class="btn btn-warning">Update Student</button>
         </form>
         <h2>Students List ({{$num_students}} Students)</h2>
+        <form action="/students" method="get">
+            @csrf
+            <td><button type="submit" class="btn btn-primary">Add Student</button></td>
+        </form>
         <table class="table table-hover">
             <tr>
                 <th>ID</th>

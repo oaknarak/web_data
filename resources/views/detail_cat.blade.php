@@ -4,7 +4,7 @@
     <div class="col-12">
         <div class="h4 text-center">{{$cat->name}}</div>
         @if ($cat->user_id != Auth::user()->id)
-            <a href="/adopt/{{$cat->id}}" class="btn btn-primary">ติดต่อขอรับเลี้ยง</a>
+            <a href="/adopt/{{$cat->id}}" class="btn btn-primary" onclick="confirm ('คุณยืนยันที่จะติดต่อรับเลี้ยงน้อง {{$cat->name}} หรือไม่')">ติดต่อขอรับเลี้ยง</a>
         @else
         @endif
         <div class="h4 text-center">{{$cat->name}}</div>

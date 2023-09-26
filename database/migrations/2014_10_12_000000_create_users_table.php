@@ -26,7 +26,6 @@ return new class extends Migration
             $table->longText('detail')->nullable();
             $table->binary('home_photo')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('social_contact')->nullable();
             $table->timestamps();
         });
     }

@@ -12,6 +12,13 @@ h3{margin-top: auto;
         align-items: center;
         height: 100vh;
         background-image: url(https://image.springnews.co.th/uploads/images/contents/w1024/2023/02/gdUEN5cnQRvF8UKPn26J.webp);
+        background-size: cover; /* ปรับขนาดของภาพเพื่อครอบคลุมพื้นที่พื้นหลัง */
+        background-position: center; /* จัดภาพให้อยู่ตรงกลาง */ 
+        
+    
+    }
+    *{
+        font-family: 'Sarabun', sans-serif;
     }
 
     .container {

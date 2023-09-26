@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Sarabun', sans-serif;
+
+
+}
+
+
+.container {
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 50px;
+    display: flex;
+ }
+
+ .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu button {
+    background-color: #fdfcfa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.menu button:hover {
+    background-color: #ffd43a;
+    color: #fff;
+}
+
+.menu a{
+    color:#000000;
+    text-decoration: none;
+}
+
+
+.navbar{
+    background-color: rgb(225, 228, 196);
+    display: flex;
+    justify-content: space-between;
+    color: #9a773b;
+    align-items: center;
+
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+
+nav img{
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+nav p{
+    font-size: 20px;
+    margin-left: 110px;
+    margin-top: -55px;
+    color: #845c3c;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+nav a{
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(209, 181, 146);
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+}
+
+.wrapper .left {
+    width: 50%;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #000000;
+
+}
+
+.wrapper left img{
+margin-bottom: 10px;
+border-radius: 5;
+
+}
+
+.wrapper .left h4{
+margin-top: 20px;
+margin-bottom: 10px;
+align-items: center;
+text-align: center;
+}
+
+.wrapper .left p{
+    align-items: center;
+text-align: center;
+}
+
+.wrapper .right{
+    width: 65%;
+    background: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 30px 25px;
+
+}
+
+.wrapper .right .info h3,
+.wrapper .right .info_data h3{
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}

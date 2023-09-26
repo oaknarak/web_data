@@ -13,7 +13,7 @@
                 <img src="{{asset('storage/Image/'.$trashed_post->photo)}}" class="card-img-top" >
                     <div class="card-body">
                         <h5 class="card-title">{{$trashed_post->header}}</h5>
-                        <p class="detail-content ellipsis card-content-detail ">{{$trashed_post->detail}}</p>
+                        <p class="detail-content ellipsis card-content-detail ">{{$trashed_post->post_type->type}}</p>
                         <a href="/restore/post/{{$trashed_post->id}}" class="btn btn-warning" onclick="return confirm('คุณแน่ใจหรือไม่ว่าต้องการกู้คืนโพสต์')">กู้คืนโพสต์</a>
                     </div>
                     <div class="card-footer">

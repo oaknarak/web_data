@@ -1,66 +1,70 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-nav{
+
+
+nav {
     display: flex;
     justify-content: space-between;
 
 
 }
 
-.menu{
+.menu {
     display: flex;
     list-style: none;
     padding: 10px;
 }
-.menu p{
+
+.menu p {
     margin-right: 50px;
     font-size: 20px;
 }
-.logo a{
+
+.logo a {
     margin-left: 30px;
 }
- .logo img{
+
+/* .logo img {
     margin-left: 0px;
     width: 80px;
     height: 80px;
 
 
- }.menu button{
+} */
+
+.menu button {
     font-size: 18px;
 
     margin-left: 20px;
 
 
 
- }
+}
 
- .menu a{
+.menu a {
     color: black;
     text-decoration: none;
- }
- .container {
+}
+
+.container {
     margin-top: 20px;
     margin-left: 20px;
     display: flex;
 
 
 
- }
+}
 
- .infomember h3 {
+.infomember h3 {
     margin-top: 20px;
     margin-left: 210px;
- }
+}
+
 .menu {
     margin-left: -50px;
 }
 
 
 .edit {
-    margin-top: 140px;
+    margin-top: 10px;
     margin-left: 740px;
 }
 
@@ -85,14 +89,14 @@ nav{
 
 }
 
-.container2 label{
+.container2 label {
     margin-top: 17px;
     margin-left: 20px;
     margin-right: 20px;
 
 }
 
-.container2 input{
+.container2 input {
     width: 280px;
     margin-top: 10px;
     margin-left: 20px;
@@ -100,7 +104,8 @@ nav{
 
 
 }
-.address{
+
+.address {
 
     margin-top: -240px;
     margin-left: 450px;
@@ -111,8 +116,9 @@ nav{
 
 
 }
+
 .content {
-    background-color:rgba(255,205,0,1.0);
+    background-color: rgba(255, 205, 0, 1.0);
     height: 140px;
     position: relative;
     margin-top: 60px;
@@ -124,17 +130,17 @@ nav{
 }
 
 
-.address input{
+.address input {
     margin-right: 100px;
 }
 
 
-nav img{
+nav img {
     width: 100px;
     height: 80px;
 }
 
-nav p{
+nav p {
     font-size: 20px;
     margin-left: 110px;
     margin-top: -55px;
@@ -142,12 +148,12 @@ nav p{
 
 
 .container3 {
-   background-color:rgba(255,205,0,1.0) ;
+    background-color: rgba(255, 205, 0, 1.0);
     margin-top: 190px;
     height: 100px;
 }
 
-.container3 p{
+.container3 p {
     font-size: 20px;
     margin-left: 510px;
     margin-top: 200px;

@@ -25,8 +25,10 @@ return new class extends Migration
             $table->longText('vacine');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer("approve");
+            $table->integer("approve")->default(0);
+            $table->integer('status')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

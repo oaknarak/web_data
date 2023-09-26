@@ -23,4 +23,18 @@ class StudentController extends Controller
         Student::destroy($id);
         return redirect('/students');
     }
+    public function editForm($id){
+        $num_students = Student::count();
+        $student_update=Student::findOrFail($id);
+        $students=Student::all();
+        return view('editFromStudents',compact('student_update','num_students','students'));
+    }
+    public function update(Request $request,$id){
+        $update_student=Student::findOrFail($id);
+        $update_student->stu_name = $request->stu_name;
+        $update_student->age = $request->age;
+        $update_student->grade = $request->grade;
+        $update_student->save();
+        return redirect('/students');
+    }
 }

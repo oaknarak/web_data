@@ -1,0 +1,14 @@
+#detail{
+    text-indent: 2em;
+    padding: 0 50px;
+}
+.card-body h5{
+    font-size: 24px;
+    white-space: nowrap; 
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.rowpt-2mb-3{
+    padding-right: 0;
+}

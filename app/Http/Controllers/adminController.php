@@ -54,7 +54,7 @@ class adminController extends Controller
         $update_post_type=Post_type::findOrFail($id);
         $update_post_type->type = $request->type;
         $update_post_type->save();
-        return redirect('/home')->with('success','บันทึกหัวข้อสำเร็จ');
+        return redirect('/form/post_type');
     }
 
 
@@ -102,13 +102,12 @@ class adminController extends Controller
     public function update_post(Request $request,$id){
         $request->validate([
             'header'=>['max:255','min:3'],
-            'detail'=>['unique:posts','min:3'],
+            'detail'=>['min:3'],
             'photo'=>['file','mimes:jpeg,png','dimensions:min_width=100,min_height=100','max:2048'],
             'source'=>['max:255','min:3']
         ],[
             'header.max'=>'กรุณากรอกชื่อหัวข้อที่มีความยาวน้อยกว่าหรือเท่ากับ 255 ตัวอักษร',
             'header.min'=>'กรุณากรอกชื่อหัวข้อที่มีความยาวไม่ต่ำกว่า 3 ตัวอักษร',
-            'detail.unique'=>'มีเนื้อหานี้อยู่แล้ว',
             'detail.min'=>'กรุณากรอกเนื้อหาที่มีความยาวไม่ต่ำกว่า 3 ตัวอักษร',
             'photo.mimes'=>'กรุณาเลือกไฟล์รูปภาพที่มีชนิดเป็น JPEG หรือ PNG',
             'photo.dimensions'=>'ไฟล์รูปภาพต้องมีขนาดมากกว่า 100x100 pixels',
@@ -121,16 +120,18 @@ class adminController extends Controller
         $update_post->post_type_id = $request->type;
         $update_post->header = $request->header;
         $update_post->detail = $request->detail;
-        $name=$request->file('photo')->getClientOriginalName();
-        $request->file('photo')->storeAs('public/Image/',$name);
-        $update_post->photo = $name;
+        if ($request->hasFile('photo')) {
+            $name = $request->file('photo')->getClientOriginalName();
+            $request->file('photo')->storeAs('public/Image/', $name);
+            $update_post->photo = $name;
+        }
         $update_post->source = $request->source;
         $update_post->save();
-        return redirect('/home');
+        return redirect('/home_admin');
     }
     public function delete_post($id){
         Post::destroy($id);
-        return redirect('/home');
+        return redirect('/home_admin');
     }
     public function trashed_post(){
         $trashed_posts=Post::onlyTrashed()->get();
@@ -144,13 +145,17 @@ class adminController extends Controller
         return view('profile');
     }
     public function approve(){
-        $pets=Pet::where('approve','=',null)->get();
+        $pets=Pet::where('approve','=',0)->get();
         return view('approve',compact('pets'));
     }
     public function create_post_adopt($id){
         $post_adopt=Pet::findOrFail($id);
         $post_adopt->approve=1;
         $post_adopt->save();
-        return redirect('/home');
+        return redirect('/home_admin');
+    }
+    public function approve_pet($id){
+        $pet=Pet::findOrFail($id);
+        return view('approve_pet',compact('pet'));
     }
 }

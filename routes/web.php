@@ -22,18 +22,17 @@ use App\Http\Controllers\AuthenticatedSessionController;
 Route::get('/', function () {
     return redirect('/home');
 });
-
+Route::get('/news/detail/{id}', [userController::class, 'show_news_detail']);
+Route::get('/home', [userController::class, 'index']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return redirect('home');
     })->name('dashboard');
-
     Route::get('/company', [companyController::class, 'index']);
-    Route::get('/home', [userController::class, 'index']);
     Route::get('form/post/pet', [userController::class, 'post_pet']);
     Route::post('/create/post/pet', [userController::class, 'create_post_pet']);
     Route::get('/profile_user', [userController::class, 'profile']);
@@ -42,19 +41,25 @@ Route::middleware([
     Route::get('/adopt/{id}', [userController::class, 'adopt']);
     Route::get('/findhome/dog', [userController::class, 'findhome_dog']);
     Route::get('/findhome/cat', [userController::class, 'findhome_cat']);
+    
     Route::get('/detail/dog/{id}', [userController::class, 'show_detail_dog']);
     Route::get('/detail/cat/{id}', [userController::class, 'show_detail_cat']);
     Route::get('/students', [StudentController::class, 'index']);
     Route::post('/students/insert', [StudentController::class, 'insert']);
     Route::get('/students/delete/{id}', [StudentController::class, 'delete']);
-    Route::get('/history/post', [userController::class, 'history_post']);
-
-    Route::get('/history', [userController::class, 'owner_confirm'])->name("tha");
+    Route::get('/students/editForm/{id}',[StudentController::class,'editForm']);
+    Route::post('/students/update/{id}',[StudentController::class,'update']);
+    Route::get('/historypost', [userController::class, 'history']);
+    Route::get('/historypost/details/{id}', [userController::class, 'details']);
+    Route::get('/historypost/delete/{id}', [userController::class, 'deletepost']);
+    Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
+    Route::get('/adopt_request', [userController::class, 'adopt_request']);
+    Route::get('/accept_request', [userController::class, 'owner_confirm'])->name('accept');
     Route::get('/success', [userController::class, 'success_adopt'])->name('success');
 });
 
-Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
 
+Route::middleware(['admin'])->group(function () {
     Route::get('/home_admin', [adminController::class, 'index']);
     Route::get('/form/post_type', [adminController::class, 'form_post_type']);
     Route::post('/create/post_type', [adminController::class, 'create_post_type']);
@@ -72,3 +77,6 @@ Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name(
     Route::get('/profile', [adminController::class, 'profile']);
     Route::get('/approve', [adminController::class, 'approve']);
     Route::get('/post/adopt/{pet_id}', [adminController::class, 'create_post_adopt']);
+    Route::get('/approve/pet/{id}',[adminController::class,'approve_pet'] );
+});
+    

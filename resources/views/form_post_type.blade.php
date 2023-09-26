@@ -20,6 +20,26 @@
                 <input type="text" name='type' required class="form-control"><br>
                 <button type="submit" class="btn btn-primary">เพิ่มหัวข้อ</button>
         </form>
+        <div class="pt-3">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">ชื่อหัวข้อ</th>
+                      <th scope="col">การทำงาน</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($post_types as $post_type)
+                        <tr>
+                            <td>{{$post_type->type}}</td>
+                            <td><a href="/edit/post_type/{{$post_type->id}}" class="btn btn-warning">แก้ไข</a></td>
+                        </tr>
+                    @empty
+                        
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
     

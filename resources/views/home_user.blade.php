@@ -1,17 +1,20 @@
 @extends('layouts.master_user')
 @section('content')
-<div class="roweiei">
+@if(session('Errors'))
+    <script>
+        alert("ท่านเคยติดต่อรับเลี้ยงแล้ว กรุณารอรับการติดต่อจากเจ้าของ")
+    </script>
+@endif
     <div class="custom-div2" >
-        <div class="container">
-            <div class="colorinimg">
-                <center><img class="imgdog" src="https://image.posttoday.com/media/content/2019/08/01/16E2CB2CC41B4CB980FC4480DC146122.jpg" width="50px" alt=""></center>
-            </div>
+        <div class="colorinimg">
+            
+        </div>
+        <div class="img">
+            <img class="imgdog" src="https://media.istockphoto.com/id/1399405977/photo/couple-of-friends-a-cat-and-a-dog-run-merrily-through-a-summer-flowering-meadow.jpg?s=170667a&w=0&k=20&c=lW9ymQDCT5Pe3n3N9d2q8HFICapTte2Ll-xEWRbFSqc=" width="50px"  alt="">
         </div>
     </div>
-</div>
-<div class="container">
     <div class="custom-menu">
-        <div class="custom-menu-item">
+        <div class="custom-menu-item  item1">
             <button id="gotoPageButton" class="btn btn-danger">ข้อมูลข่าวสาร</button>
             <script>
                 document.getElementById("gotoPageButton").addEventListener("click", function() {
@@ -19,7 +22,10 @@
                 });
             </script>
         </div>
-        <div class="custom-menu-item">
+        <div class="custom-menu-item help">
+            <button class="btn btn-primary"><a href="/form/post/pet">โพสต์หาบ้านให้สัตว์</a></button>
+        </div> 
+        <div class="custom-menu-item item2">
             <button id="gotoPageButton3" class="btn btn-outline-dark">หาบ้านให้สัตว์</button>
             <script>
                 document.getElementById("gotoPageButton3").addEventListener("click", function() {
@@ -27,26 +33,19 @@
                 });
             </script>
         </div>
+       
     </div>
-</div>
-<div class="col-7">
-<div class="d-flex flex-row mb-3">
-</div>
-</div>
-<div class="help">
-<button class="btn btn-outline-dark"><a href="/form/post/pet">โพสต์หาบ้านให้สัตว์</a></button>
-</div> 
-</div>
-</div>
+
+
 <div class="news">
     <h3>ข้อมูลข่าวสาร</h3>
 </div>
 <div class="card-body">
     @forelse ($news_posts as $news_post)
         <div class="card-text">
-        <a href="/detail/dog/{{$news_post->id}}"><img class="imgsize" src="{{asset('storage/Image/'.$news_post->photo)}}"  ></a>
-        <h3>{{$news_post->header}}</h3>
-        <p>{{$news_post->post_type->type}}</p>
+            <a href="/news/detail/{{$news_post->id}}"><img class="imgsizenews" src="{{asset('storage/Image/'.$news_post->photo)}}"  ></a>
+            <h3>{{$news_post->header}}</h3>
+            <p>{{$news_post->post_type->type}}</p>
         {{-- <a href="/detail/dog/{{$news_post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}
             <div class="card-footer">
                 <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$news_post->created_at)}}</small>
