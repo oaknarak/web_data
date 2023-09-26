@@ -45,7 +45,6 @@
             @endif
     
             @empty
-                ไม่มีข้อมูล
             @endforelse
               
         </table>

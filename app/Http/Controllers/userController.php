@@ -55,6 +55,13 @@ class userController extends Controller
         return view('form_to_adopt');
     }
     public function update_form(Request $request){
+        $request->validate([
+            'home_photo'=>['file','mimes:jpeg,png','dimensions:min_width=100,min_height=100','max:2048'],
+        ],[
+            'home_photo.mimes'=>'กรุณาเลือกไฟล์รูปภาพที่มีชนิดเป็น JPEG หรือ PNG',
+            'home_photo.dimensions'=>'ไฟล์รูปภาพต้องมีขนาดมากกว่า 100x100 pixels',
+            'home_photo.max'=>'ไฟล์รูปภาพต้องมีขนาดน้อยกว่า 2MB',
+        ]);
         $new_form_adopt=User::findOrFail(Auth::user()->id);
         $new_form_adopt->address = $request->address;
         $new_form_adopt->occupation = $request->occupation;
@@ -83,7 +90,7 @@ class userController extends Controller
             $request_to_adopt->adopt_id=Auth::user()->id;
             $request_to_adopt->selected=0;
             $request_to_adopt->save();
-            return redirect('/home');
+            return redirect('/home')->with('success_adopt','คุณติดต่อรับเลี้ยงสำเร็จ กรุณารอการตอบกลับจากเจ้าของ');
         }
     }
     public function history(){
@@ -136,7 +143,6 @@ class userController extends Controller
     public function  success_adopt(){
         $show=PetUser::where('adopt_id','=',Auth::user()->id)->where('selected','=',1)->get();
         return view('success_adopt',compact('show'));
-        
     }
 
     public function details($id){

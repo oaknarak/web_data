@@ -26,11 +26,19 @@
 
             </a></ul>
     </div>
-
     <div class = "infomember">
         <h3>ข้อมูลเพิ่มเติมสำหรับสมาชิก</h3>
     </div>
-
+    @if ($errors->any())
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                         @endforeach
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+    @endif
     <div class="content">
         <div class="container2">
             <form action="/update/form" method="post" enctype="multipart/form-data">
@@ -78,7 +86,7 @@
                     <input class="form-check-input" type="checkbox" value="yes" id="consentCheckbox" required>
                     <label class="form-check-label" for="form_privacy">ท่านได้
                         <a href="https://drive.google.com/file/d/1HT374siniqVodGquFOdHzl7YVW7Tb_Kt/view?fbclid=IwAR1EYlBJ6gVMBLyyTyHD4uq0bOGGn
-                                kneDVq8plra5DHDX-7iB9IORYsooPY">
+                                kneDVq8plra5DHDX-7iB9IORYsooPY" target="_blank">
                             ยอมรับเงื่อนไขและข้อตกลง
                         </a>
                         ในการเก็บข้อมูลส่วนตัวของท่านกับทางเรา

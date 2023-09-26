@@ -5,6 +5,11 @@
         alert("ท่านเคยติดต่อรับเลี้ยงแล้ว กรุณารอรับการติดต่อจากเจ้าของ")
     </script>
 @endif
+@if(session('success_adopt'))
+    <script>
+        alert("คุณติดต่อรับเลี้ยงสำเร็จ กรุณารอรับการติดต่อจากเจ้าของ")
+    </script>
+@endif
     <div class="custom-div2" >
         <div class="colorinimg">
             

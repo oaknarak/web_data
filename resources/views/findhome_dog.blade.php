@@ -65,7 +65,11 @@
         <div class="card-text">
         <a href="/detail/dog/{{$dog->id}}"><img class="imgsizenews" src="{{asset('storage/Image/'.$dog->pet_photo)}}"  ></a>
         <h3>{{$dog->name}}</h3>
-        <p>{{$dog->gender}}</p>
+        @if ($dog->gender=='F')
+            <p>เพศเมีย</p>
+        @else
+            <p>เพศผู้</p>
+        @endif
         {{-- <a href="/detail/dog/{{$dog->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}
             <div class="card-footer">
                 <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$dog->created_at)}}</small>

@@ -152,7 +152,7 @@ class adminController extends Controller
         $post_adopt=Pet::findOrFail($id);
         $post_adopt->approve=1;
         $post_adopt->save();
-        return redirect('/home_admin');
+        return redirect('/approve');
     }
     public function approve_pet($id){
         $pet=Pet::findOrFail($id);

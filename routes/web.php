@@ -63,7 +63,6 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/history/post', [userController::class, 'history_post']);
 
     Route::get('/history', [userController::class, 'owner_confirm'])->name("tha");
-    Route::get('/success', [userController::class, 'success_adopt'])->name('success');
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
 
     Route::get('/home_admin', [adminController::class, 'index']);
@@ -84,6 +83,5 @@ Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name(
     Route::get('/approve', [adminController::class, 'approve']);
     Route::get('/post/adopt/{pet_id}', [adminController::class, 'create_post_adopt']);
     Route::get('/approve/pet/{id}',[adminController::class,'approve_pet'] );
-    Route::get('/post/adopt/{pet_id}', [adminController::class, 'create_post_adopt']);
 });
 
