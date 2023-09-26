@@ -19,6 +19,8 @@ use App\Http\Controllers\AuthenticatedSessionController;
 */
 
 
+
+
 Route::get('/', function () {
     return redirect('/home');
 });
@@ -41,7 +43,6 @@ Route::middleware([
     Route::get('/adopt/{id}', [userController::class, 'adopt']);
     Route::get('/findhome/dog', [userController::class, 'findhome_dog']);
     Route::get('/findhome/cat', [userController::class, 'findhome_cat']);
-    
     Route::get('/detail/dog/{id}', [userController::class, 'show_detail_dog']);
     Route::get('/detail/cat/{id}', [userController::class, 'show_detail_cat']);
     Route::get('/students', [StudentController::class, 'index']);
@@ -58,8 +59,13 @@ Route::middleware([
     Route::get('/success', [userController::class, 'success_adopt'])->name('success');
 });
 
-
 Route::middleware(['admin'])->group(function () {
+    Route::get('/history/post', [userController::class, 'history_post']);
+
+    Route::get('/history', [userController::class, 'owner_confirm'])->name("tha");
+    Route::get('/success', [userController::class, 'success_adopt'])->name('success');
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
+
     Route::get('/home_admin', [adminController::class, 'index']);
     Route::get('/form/post_type', [adminController::class, 'form_post_type']);
     Route::post('/create/post_type', [adminController::class, 'create_post_type']);
@@ -78,5 +84,6 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/approve', [adminController::class, 'approve']);
     Route::get('/post/adopt/{pet_id}', [adminController::class, 'create_post_adopt']);
     Route::get('/approve/pet/{id}',[adminController::class,'approve_pet'] );
+    Route::get('/post/adopt/{pet_id}', [adminController::class, 'create_post_adopt']);
 });
-    
+

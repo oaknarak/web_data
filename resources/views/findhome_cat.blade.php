@@ -62,7 +62,7 @@
     <div class="card-body">
         @forelse ($cats as $cat)
             <div class="card-text">
-            <a href="/detail/dog/{{$cat->id}}"><img class="imgsizenews" src="{{asset('storage/Image/'.$cat->pet_photo)}}"  ></a>
+            <a href="/detail/cat/{{$cat->id}}"><img class="imgsizenews" src="{{asset('storage/Image/'.$cat->pet_photo)}}"  ></a>
             <h3>{{$cat->name}}</h3>
             <p>{{$cat->gender}}</p>
             {{-- <a href="/detail/dog/{{$cat->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}

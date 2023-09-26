@@ -9,9 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
 
 </head>
-
 <link rel="stylesheet" href="{{asset('./css/Login.css')}}">
-
 <body>
 
     @if (session('status'))
