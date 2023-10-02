@@ -25,7 +25,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="name" class="form-label">ชื่อสัตว์ : </label>
-                            <input type="text" name="name" required class="form-control">
+                            <input type="text" name="name" required class="form-control" pattern="[a-zA-Zก-๏ะ฿]+">
                         </div>
                     </div>
                     <div class="col">
@@ -43,7 +43,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="color" class="form-label">สี : </label>
-                            <input type="text" name="color" required class="form-control">
+                            <input type="text" name="color" required class="form-control" pattern="[a-zA-Zก-๏ะ฿]+">
                         </div>
                     </div>
                     <div class="col">
@@ -61,7 +61,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="species" class="form-label">พันธุ์สัตว์ : </label>
-                            <input type="text" name="species" required class="form-control">
+                            <input type="text" name="species" required class="form-control" pattern="[a-zA-Zก-๏ะ฿]+">
                         </div>
                     </div>
                     <div class="col">

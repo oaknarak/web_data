@@ -15,18 +15,18 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://127.0.0.1:8000/home">
+            <a class="navbar-brand" href="/home">
                 <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/376355393_1053473069019885_1598622815889590690_n.png?stp=dst-png_p206x206&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFeoX-FZxvjqGYCxhc3tnHl2iylSUFKOFPaLKVJQUo4U01fEVh2e0CPmbXTAIjClhjE-Q9OoD1F9EV3k_P1A1ND&_nc_ohc=VtgiIhhNd6UAX-EYgy1&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTsla02gT69s5zUMIZwWT-RhtO9wyNYTveWDIFCpkyTuQ&oe=652A5198" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <a class="nameweb" href="http://127.0.0.1:8000/home">Adoptrable</a>
             @if (Auth::check())
                 @if (Auth::user()->name == null)
-                    <p><a href="/login">เข้าสู่ระบบ / สมัครสมาชิก</a></p>
+                    <p class="login_text"><a href="/login">เข้าสู่ระบบ / สมัครสมาชิก</a></p>
                 @else
                     <p>{{ Auth::user()->name }}</p>
                 @endif
             @else
-                <p><a href="/login">เข้าสู่ระบบ / สมัครสมาชิก</a></p>
+                <p class="login_text"><a href="/login">เข้าสู่ระบบ / สมัครสมาชิก</a></p>
             @endif
             <div class="img-profile">
                 <a href="/profile_user" >

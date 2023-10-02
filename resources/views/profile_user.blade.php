@@ -27,7 +27,7 @@
             </a></ul>
     </div>
     <div class = "infomember">
-        <h3>ข้อมูลเพิ่มเติมสำหรับสมาชิก</h3>
+        <h3>ข้อมูลเพิ่มเติมในกรณีรับเลี้ยงสัตว์</h3>
     </div>
     @if ($errors->any())
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -45,7 +45,7 @@
                 @csrf
                 <div class="form">
                     <label for="">ชื่อสกุล</label><br>
-                    <input type="text" value="{{Auth::user()->name}}" name="name"><br>
+                    <input type="text" value="{{Auth::user()->name}}" name="name" readonly><br>
                     <label for="">เบอร์โทร</label><br>
                     <input type="text" value="{{Auth::user()->phone_number}}" name="phone_number" pattern="[0-9]{10}"><br>
                     <label for="">อีเมล</label><br>
@@ -57,11 +57,11 @@
                 </div>
                 <div class = "occupation">
                     <label for="">อาชีพ</label><br>
-                    <input type="text" value="{{Auth::user()->occupation}}" name="occupation">
+                    <input type="text" value="{{Auth::user()->occupation}}" name="occupation" pattern="[a-zA-Zก-๏ะ฿]+">
                 </div>
                 <div class="Salary">
                     <label for="">เงินเดือน</label><br>
-                    <input type="text" value="{{Auth::user()->salary}}" name="salary">
+                    <input type="text" value="{{Auth::user()->salary}}" name="salary" pattern="[0-9]{10}">
                 </div>
                 <div class = "Brithday">
                     <label for="">วันเกิด</label><br>

@@ -18,7 +18,7 @@ class userController extends Controller
     }
     public function show_news_detail($id){
         $post=Post::findOrFail($id);
-        return view('detail_post',compact('post'));
+        return view('detail_news',compact('post'));
     }
     public function post_pet(){
         return view('form_post_pet');
@@ -155,6 +155,7 @@ class userController extends Controller
     }
     public function deletepost($id){
         Pet::destroy($id);
+        PetUser::where('pet_id','=',$id)->delete();
         return redirect('/historypost');
     }
     

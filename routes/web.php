@@ -34,7 +34,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return redirect('home');
     })->name('dashboard');
-    Route::get('/company', [companyController::class, 'index']);
     Route::get('form/post/pet', [userController::class, 'post_pet']);
     Route::post('/create/post/pet', [userController::class, 'create_post_pet']);
     Route::get('/profile_user', [userController::class, 'profile']);
@@ -45,26 +44,18 @@ Route::middleware([
     Route::get('/findhome/cat', [userController::class, 'findhome_cat']);
     Route::get('/detail/dog/{id}', [userController::class, 'show_detail_dog']);
     Route::get('/detail/cat/{id}', [userController::class, 'show_detail_cat']);
-    Route::get('/students', [StudentController::class, 'index']);
-    Route::post('/students/insert', [StudentController::class, 'insert']);
-    Route::get('/students/delete/{id}', [StudentController::class, 'delete']);
-    Route::get('/students/editForm/{id}',[StudentController::class,'editForm']);
-    Route::post('/students/update/{id}',[StudentController::class,'update']);
     Route::get('/historypost', [userController::class, 'history']);
     Route::get('/historypost/details/{id}', [userController::class, 'details']);
     Route::get('/historypost/delete/{id}', [userController::class, 'deletepost']);
-    Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
     Route::get('/adopt_request', [userController::class, 'adopt_request']);
     Route::get('/accept_request', [userController::class, 'owner_confirm'])->name('accept');
     Route::get('/success', [userController::class, 'success_adopt'])->name('success');
+    Route::get('/history/post', [userController::class, 'history_post']);
+    Route::get('/history', [userController::class, 'owner_confirm'])->name("tha");
+    Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
 });
 
 Route::middleware(['admin'])->group(function () {
-    Route::get('/history/post', [userController::class, 'history_post']);
-
-    Route::get('/history', [userController::class, 'owner_confirm'])->name("tha");
-Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware('web');
-
     Route::get('/home_admin', [adminController::class, 'index']);
     Route::get('/form/post_type', [adminController::class, 'form_post_type']);
     Route::post('/create/post_type', [adminController::class, 'create_post_type']);
