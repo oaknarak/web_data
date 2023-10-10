@@ -27,23 +27,60 @@
     <div class="news">
         <h3>ข้อมูลข่าวสาร</h3>
     </div>
+
+
+    <div class="selecttype">
+        <select name="typepost" id="typepost">
+            <option value="" selected>แสดงข่าวทั้งหมด</option>
+            @php
+                $types = [];
+            @endphp
+            @foreach ($news_posts as $news_post)
+                @if (!in_array($news_post->post_type->type, $types))
+                    <option value="{{$news_post->post_type->type}}">{{$news_post->post_type->type}}</option>
+                    @php
+                        $types[] = $news_post->post_type->type;
+                    @endphp
+                @endif
+            @endforeach
+        </select>
+    </div>
+
     <div class="card-body">
         @forelse ($news_posts as $news_post)
-            <div class="card-text">
-                <a href="/news/detail/{{ $news_post->id }}"><img class="imgsizenews"
-                        src="{{ asset('storage/Image/' . $news_post->photo) }}"></a>
-                <h3>{{ $news_post->header }}</h3>
-                <p>{{ $news_post->post_type->type }}</p>
-                {{-- <a href="/detail/dog/{{$news_post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}
-                <div class="card-footer">
-                    <small
-                        class="text-body-secondary">{{ thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y', $news_post->created_at) }}</small>
-                </div>
+        <div class="card-text {{$news_post->post_type->type}}-news">
+            <a href="/news/detail/{{$news_post->id}}"><img class="imgsizenews" src="{{asset('storage/Image/'.$news_post->photo)}}"  ></a>
+            <h3>{{$news_post->header}}</h3>
+            <p>{{$news_post->post_type->type}}</p>
+            <div class="card-footer">
+                <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$news_post->created_at)}}</small>
             </div>
-        @empty
-        <div class="nonews">
-            ไม่มีข้อมูล
         </div>
+        @empty
+            ไม่มีข้อมูล
         @endforelse
     </div>
+    <script>
+        const selectElement = document.getElementById("typepost");
+        const newsCards = document.querySelectorAll(".card-text");
+
+        selectElement.addEventListener("change", function() {
+            const selectedType = this.value;
+
+            if (selectedType === "") {
+                newsCards.forEach(function(card) {
+                    card.style.display = "block";
+                });
+            } else {
+
+                newsCards.forEach(function(card) {
+                    card.style.display = "none";
+                });
+
+                document.querySelectorAll(`.${selectedType}-news`).forEach(function(card) {
+                    card.style.display = "block";
+                });
+            }
+        });
+    </script>
 @endsection

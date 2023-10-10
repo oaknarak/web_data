@@ -77,7 +77,7 @@
                     <input type="text" name="source" required class="form-control" >
                 </div>
                 <div class="mb-3">
-                   <button type="submit" class="btn btn-primary">เพิ่มข่าวสาร</button> 
+                   <button type="submit" class="btn btn-warning">เพิ่มข่าวสาร</button>
                 </div>
             </form>
         </div>

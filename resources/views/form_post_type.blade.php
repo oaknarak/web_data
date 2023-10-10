@@ -11,7 +11,10 @@
 </div>
 <div class="container">
 <div class="row pt-2">
+    <div class="h4 text-center">เพิ่มหัวข้อข่าวสาร</div>
+
     <div class="col-12">
+
         @error('type')
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 {{$message}}
@@ -28,9 +31,9 @@
                 @csrf
                 <label for="type" class="form-label">หัวข้อข่าวสาร: </label>
                 <input type="text" name='type' required class="form-control"><br>
-                <button type="submit" class="btn btn-primary">เพิ่มหัวข้อ</button>
+                <button type="submit" class="btn btn-warning">เพิ่มหัวข้อ</button>
         </form>
-        <div class="pt-3">
+        <div class="pt-3kuy">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -45,7 +48,7 @@
                             <td><a href="/edit/post_type/{{$post_type->id}}" class="btn btn-warning">แก้ไข</a></td>
                         </tr>
                     @empty
-                        
+
                     @endforelse
                 </tbody>
             </table>
@@ -53,5 +56,5 @@
     </div>
 </div>
 </div>
-    
+
 @endsection

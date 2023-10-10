@@ -4,11 +4,24 @@
 }
 .card-body h5{
     font-size: 24px;
-    white-space: nowrap; 
+    white-space: nowrap;
     width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-div.rowpt-2mb-3{
+.rowpt-2mb-3{
     padding-right: 0;
 }
+
+
+.custom-div2 {
+    width: 100%;
+    background-color: rgba(255, 205, 0, 1.0);
+    height: 140px;
+    position: relative;
+    top: 70px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+

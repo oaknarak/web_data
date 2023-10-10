@@ -270,3 +270,57 @@ footer {
 .nonews{
 margin-left: 250px;
 }
+.selecttype{
+    margin-left: 250px;
+}
+
+.card-text {
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    padding: 25px;
+    background-color: #FFFAF6;
+}
+
+
+.imgsizenews {
+    width: auto;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    align-items: center;
+    margin: auto;
+}
+
+.card-body {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    width: 70%;
+    margin-left: 250px;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.col-12{
+    background-color:rgb(247, 244, 175);
+    border-radius: 10px;
+    height: 680px
+
+}
+.col-12 h4 {
+    margin-top: 50px;
+}
+
+/* .pt-3kuy td {
+    border-radius: 10px;
+}
+.pt-3kuy th{
+    border-radius: 10px;
+} */
+.pt-3kuy{
+    padding: 10px;
+    margin: 10px;
+}
