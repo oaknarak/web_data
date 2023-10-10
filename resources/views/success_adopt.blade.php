@@ -20,9 +20,9 @@
             <th>พันธุ์สัตว์</th>
             <th>สถานะ</th>
         </tr>
-       
-            @forelse ($show as $successadopt) 
-            
+
+            @forelse ($show as $successadopt)
+
             <tr>
                  <td>{{$successadopt->pet->name}}</td>
                 <td>{{$successadopt->pet->user->name}}</td>
@@ -36,17 +36,19 @@
                 @endif
             </tr>
             @empty
-            <td colspan="6">ไม่มีข้อมูล</td>    
+
+            <td colspan="6">ไม่มีข้อมูล</td>
+
         @endforelse
     </table>
-    
+
 </div>
 
 <div class="custom-div2" >
     <div class="colorinimg">
-        
+
     </div>
 </div>
-    
+
 @endsection
 

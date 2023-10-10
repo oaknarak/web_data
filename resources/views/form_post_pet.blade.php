@@ -1,5 +1,14 @@
 @extends('layouts.master_user')
 @section('content')
+<div class="custom-menu-item-back">
+    <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+    <script>
+        document.getElementById("gotoPageButton").addEventListener("click", function() {
+            window.location.href = "http://127.0.0.1:8000/home";
+        });
+    </script>
+</div>
+
     <div class="row pt-2 mx-5">
         <div class="col-12">
             <div class="h4 text-center pt-2">โพสต์หาบ้านให้สัตว์</div>
@@ -90,7 +99,7 @@
                        <div class="mb-3">
                         <label for="detail" class="form-label">รายละเอียดเพิ่มเติม : </label>
                         <textarea type="text" name="detail" required class="form-control" rows="10"></textarea>
-                    </div> 
+                    </div>
                     </div>
                     <div class="col">
                         <div class="mb-3">
@@ -121,7 +130,9 @@
                             });
                         });
                     </script>
-                
+
+
+
                 </div>
                 <button type="submit" class="btn btn-warning">ส่งคำขอ</button>
                  <style>
@@ -132,5 +143,6 @@
             </form>
         </div>
     </div>
-    
+
+
 @endsection

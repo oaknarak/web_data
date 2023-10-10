@@ -12,7 +12,7 @@
 @endif
     <div class="custom-div2" >
         <div class="colorinimg">
-            
+
         </div>
         <div class="img">
             <img class="imgdog" src="https://media.istockphoto.com/id/1399405977/photo/couple-of-friends-a-cat-and-a-dog-run-merrily-through-a-summer-flowering-meadow.jpg?s=170667a&w=0&k=20&c=lW9ymQDCT5Pe3n3N9d2q8HFICapTte2Ll-xEWRbFSqc=" width="50px"  alt="">
@@ -31,7 +31,7 @@
             <button id="gotoPageButton3" class="btn btn-outline-dark">รับอุปการะสัตว์</button>
             <script>
                 document.getElementById("gotoPageButton3").addEventListener("click", function() {
-                window.location.href = "http://127.0.0.1:8000/findhome/dog"; 
+                window.location.href = "http://127.0.0.1:8000/findhome/dog";
                 });
             </script>
         </div>
@@ -39,11 +39,11 @@
             <button id="gotoPageButton8" class="btn btn-outline-dark">โพสต์หาบ้านให้สัตว์</button>
             <script>
                 document.getElementById("gotoPageButton8").addEventListener("click", function() {
-                window.location.href = "http://127.0.0.1:8000/form/post/pet"; 
+                window.location.href = "http://127.0.0.1:8000/form/post/pet";
                 });
             </script>
-        </div>  
-       
+        </div>
+
     </div>
 
 

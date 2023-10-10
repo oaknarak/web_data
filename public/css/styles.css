@@ -694,7 +694,6 @@ footer {
     /* หรือ color: rgb(255, 204, 0); */
 
 
-}
 */
 /* สีปุ่มเหลืองอ่อน */
 .petpost input {
@@ -712,7 +711,7 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
 .selecttype{
     margin-left: 250px;
 }
+

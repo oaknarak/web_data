@@ -1,26 +1,47 @@
 @extends('layouts.master')
 @section('content')
-<link rel="stylesheet" href="{{asset('css/news.css')}}">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        @forelse ($posts as $post)
-        <div class="col">
-            <div class="card h-100">
-                <a href="/detail/post/{{$post->id}}"><img src="{{asset('storage/Image/'.$post->photo)}}" class="card-img-top" ></a>
-                    <div class="card-body">
-                        <h5 class="card-title">{{$post->header}}</h5>
-                        <p class="detail-content ellipsis card-content-detail ">{{$post->post_type->type}}</p>
-                        <p class="detail-content ellipsis card-content-detail ">ผู้โพสต์: {{$post->user->name}}</p>
-                        <a href="/detail/post/{{$post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
-                        <a href="/edit/post/{{$post->id}}" class="btn btn-warning">แก้ไข</a>
-                        <a href="/delete/post/{{$post->id}}" class="btn btn-danger" onclick="return confirm('คุณแน่ใจหรือไม่ว่าต้องการลบโพสต์')">ลบ</a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">{{thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y',$post->created_at)}}</small>
-                    </div>
-            </div>
+    <link rel="stylesheet" href="{{ asset('css/news.css') }}">
+    <div class="custom-div2">
+        <div class="colorinimg">
+
         </div>
+        <div class="img">
+            <img class="imgdog"
+                src="https://media.istockphoto.com/id/1399405977/photo/couple-of-friends-a-cat-and-a-dog-run-merrily-through-a-summer-flowering-meadow.jpg?s=170667a&w=0&k=20&c=lW9ymQDCT5Pe3n3N9d2q8HFICapTte2Ll-xEWRbFSqc=" width="50px"
+                alt="">
+        </div>
+    </div>
+    <div class="custom-menu">
+        <div class="custom-menu-item admin">
+            <button id="gotoPageButton77" class="btn btn-success">การทำงานแอดมิน</button>
+            <script>
+                document.getElementById("gotoPageButton77").addEventListener("click", function() {
+                    window.location.href = "http://127.0.0.1:8000/profile";
+                });
+            </script>
+        </div>
+
+    </div>
+
+
+    <div class="news">
+        <h3>ข้อมูลข่าวสาร</h3>
+    </div>
+    <div class="card-body">
+        @forelse ($news_posts as $news_post)
+            <div class="card-text">
+                <a href="/news/detail/{{ $news_post->id }}"><img class="imgsizenews"
+                        src="{{ asset('storage/Image/' . $news_post->photo) }}"></a>
+                <h3>{{ $news_post->header }}</h3>
+                <p>{{ $news_post->post_type->type }}</p>
+                {{-- <a href="/detail/dog/{{$news_post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a> --}}
+                <div class="card-footer">
+                    <small
+                        class="text-body-secondary">{{ thaidate('โพสต์เมื่อวันที่ j F พ.ศ.Y', $news_post->created_at) }}</small>
+                </div>
+            </div>
         @empty
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="nonews">
             ไม่มีข้อมูล
         </div>
         @endforelse

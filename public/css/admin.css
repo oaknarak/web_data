@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mitr&family=Sarabun&display=swap');
+*{
+    font-family: 'Sarabun', sans-serif;
+}
+
+.menu{
+    margin-top: 30px;
+}
 .container-fluid p {
     margin-left: 1000px;
     margin-top: 17px;
@@ -13,10 +21,13 @@
     margin-left: -40px;
     font-size: 22px;
 }
+ul .menu{
+    margin-left: 100px;
+}
 .menu {
     display: flex;
     list-style: none;
-    padding: 10px;
+    margin-right: 90px;
 }
 
 .menu p {
@@ -24,7 +35,7 @@
     font-size: 20px;
 }
 .menu a {
-    
+
     text-decoration: none;
 }
 .menu button {
@@ -101,6 +112,161 @@ hr{
     display: block;
     margin-top: 30px;
     margin-bottom: 30px;
-    clear: both; 
+    clear: both;
     margin-left: 20px;
+}
+
+.container3 {
+    background-color: rgba(255, 205, 0, 1.0);
+    margin-top: 500px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    align-items: center;
+    height: fit-content;
+    width: auto;
+}
+
+.container3 p {
+    font-size: 20px;
+    margin-left: 620px;
+    margin-top: 250px;
+}
+
+footer {
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+
+/* .container3 img {
+    height: auto;
+  } */
+
+.infoprofile {
+    margin: 25px;
+}
+
+.infoprofile small {
+    margin: 5px 0;
+}
+
+.infoprofile2 small {
+    margin: 5px 0;
+}
+
+.infoprofile small {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.infoprofile2 small {
+    margin: 5px 0;
+    /* text-align: left; */
+}
+
+.aboutusprofile {
+    margin: 10px;
+    width: 600px;
+}
+
+.custom-div2 {
+    width: 100%;
+    background-color: rgba(255, 205, 0, 1.0);
+    height: 140px;
+    position: relative;
+    top: 70px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.custom-menu {
+    margin-top: 300px;
+    margin-left: 250px;
+}
+
+.custom-menu-item {
+    display: block;
+    margin-top: 10px;
+    clear: both;
+}
+
+.help,
+.item2,
+.item1 {
+    float: none;
+}
+
+.custom-menu-item-dog,
+.custom-menu-item-cat {
+    display: inline-block;
+    align-items: center;
+}
+
+.custom-menu-item-dog {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.custom-menu-item-cat {
+    margin-right: 20px;
+}
+
+.custom-menu-item-back {
+    display: block;
+    margin-top: 30px;
+    clear: both;
+    margin-left: 20px;
+}
+
+.custom-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.custom-footer {
+    background-color: rgba(255, 205, 0, 1.0);
+    padding: 40px;
+    text-align: center;
+}
+
+.imgdog {
+    height: 40%;
+    width: 45%;
+    border-radius: 2%;
+    box-shadow: 5px 5px 20px grey;
+    margin-top: -110px;
+    margin-left: 10px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news {
+    margin-top: 40px;
+    clear: left;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 14px;
+}
+.nonews{
+margin-left: 250px;
 }

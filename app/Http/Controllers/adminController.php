@@ -16,9 +16,15 @@ class AdminController extends Controller
     // public function show(){
     //     return view('/home_admin');
     // }
-    public function index(){
-        $posts=Post::orderBy('created_at', 'desc')->get();
-        return view('home_admin',compact('posts'));
+    // public function index(){
+    //     $posts=Post::orderBy('created_at', 'desc')->get();
+    //     return view('home_admin',compact('posts'));
+    // }
+
+    public function index2(){
+        $news_posts=Post::orderBy('created_at', 'desc')->get();
+
+    return view('home_admin',compact('news_posts'));
     }
     public function form_post_type(){
         $post_types=Post_type::all();
@@ -36,7 +42,7 @@ class AdminController extends Controller
         $new_post_type= new Post_type;
         $new_post_type->type = $request->type;
         $new_post_type->save();
-        return redirect('/form/post_type')->with('success','บันทึกหัวข้อสำเร็จ');  
+        return redirect('/form/post_type')->with('success','บันทึกหัวข้อสำเร็จ');
     }
     public function show_detail_post_type($id){
         $post_type=Post_type::findOrFail($id);
