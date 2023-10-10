@@ -1,6 +1,15 @@
 @extends('layouts.master')
 @section('content')
+
 <link rel="stylesheet" href="{{asset('css/news.css')}}">
+<div class="custom-menu-item-back">
+    <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+    <script>
+        document.getElementById("gotoPageButton").addEventListener("click", function() {
+            window.location.href = "http://127.0.0.1:8000/home_admin";
+        });
+    </script>
+</div>
     <div class="row pt-2 mb-3">
         <div class="col-12">
             <div class="h4 text-center">{{$post->header}}</div>

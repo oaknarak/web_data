@@ -13,8 +13,9 @@
                 </script>
         @endif
         <ul class="menu">
+            <button class="btn btn-outline-dark"> <li><a href="/home">กลับไปก่อนหน้า</a></li></button>
             <button class="btn btn-warning" ><li><a href="/historypost">ประวัติการโพสต์</a></li></button>
-            <button class="btn btn-success" id="request" ><li><a href="/adopt_request">คำขอรับเลี้ยง</a></li></button>
+            <button class="btn btn-warning" id="request" ><li><a href="/adopt_request">คำขอรับเลี้ยง</a></li></button>
             <button class="btn btn-warning"><li><a href="/success">ประวัติการรับเลี้ยง</a></li></button>
             <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
@@ -41,27 +42,27 @@
     @endif
     <div class="content">
         <div class="container2">
-            <form action="/update/form" method="post" enctype="multipart/form-data">
+            <form action="/update/form" method="post" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="form">
-                    <label for="">ชื่อสกุล</label><br>
+                    <label for="">ชื่อ สกุล</label><br>
                     <input type="text" value="{{Auth::user()->name}}" name="name" readonly><br>
                     <label for="">เบอร์โทร</label><br>
-                    <input type="text" value="{{Auth::user()->phone_number}}" name="phone_number" pattern="[0-9]{10}"><br>
+                    <input type="text" value="{{Auth::user()->phone_number}}" name="phone_number" pattern="[0-9]{10}" required><br>
                     <label for="">อีเมล</label><br>
-                    <input type="email" value="{{Auth::user()->email}}" name="email">
+                    <input type="email" value="{{Auth::user()->email}}" name="email" readonly>
                 </div>
                 <div class = "address">
                     <label for="">ที่อยู่</label><br>
-                    <input type="text" value="{{Auth::user()->address}}" name="address">
+                    <input type="text" value="{{Auth::user()->address}}" name="address" required>
                 </div>
                 <div class = "occupation">
                     <label for="">อาชีพ</label><br>
-                    <input type="text" value="{{Auth::user()->occupation}}" name="occupation" pattern="[a-zA-Zก-๏ะ฿]+">
+                    <input type="text" value="{{Auth::user()->occupation}}" name="occupation" pattern="[a-zA-Zก-๏ะ฿\s]+">
                 </div>
                 <div class="Salary">
-                    <label for="">เงินเดือน</label><br>
-                    <input type="text" value="{{Auth::user()->salary}}" name="salary" pattern="[0-9]{10}">
+                    <label for="">เงินเดือน (บาท)</label><br>
+                    <input type="text" value="{{Auth::user()->salary}}" name="salary" pattern="[0-9]{0,6}">
                 </div>
                 <div class = "Brithday">
                     <label for="">วันเกิด</label><br>
@@ -76,7 +77,7 @@
                 <div class = "envi">
                     <p >สภาพแวดล้อมของที่อยู่</p>
                     <img src="{{asset('storage/Image/'.Auth::user()->home_photo)}}" alt="" id="image-preview">
-                    <input type="file" name="home_photo">
+                    <input type="file" name="home_photo" accept="image/jpeg, image/png">
                 </div>
                 <div class="edit">
                     <button type="submit" class="btn btn-success" id = "submitButton" disabled >บันทึกข้อมูล</button>

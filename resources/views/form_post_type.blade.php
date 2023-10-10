@@ -1,5 +1,15 @@
+
 @extends('layouts.master')
 @section('content')
+<div class="custom-menu-item-back">
+    <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+    <script>
+        document.getElementById("gotoPageButton").addEventListener("click", function() {
+            window.location.href = "http://127.0.0.1:8000/profile";
+        });
+    </script>
+</div>
+<div class="container">
 <div class="row pt-2">
     <div class="col-12">
         @error('type')
@@ -14,7 +24,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <form action="/create/post_type" method="post" >
+        <form action="/create/post_type" method="post" autocomplete="off">
                 @csrf
                 <label for="type" class="form-label">หัวข้อข่าวสาร: </label>
                 <input type="text" name='type' required class="form-control"><br>
@@ -41,6 +51,7 @@
             </table>
         </div>
     </div>
+</div>
 </div>
     
 @endsection

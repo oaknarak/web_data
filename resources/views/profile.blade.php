@@ -2,6 +2,7 @@
 @section('content')
     <div class = "containeradmin">
             <ul class="menu">
+                <button class="btn btn-info" id="post" ><li><a href="/home_admin">ข่าวสาร</a></li></button>
                 <button class="btn btn-primary" id="primarypost" ><li><a href="/form/post">โพสต์ข้อมูลข่าวสาร</a></li></button>
                 <button class="btn btn-success" id="requestpost" ><li><a href="/approve">อนุมัติโพสต์หาบ้าน</a></li></button>
                 <button class="btn btn-info" id="infoposttype"  ><li><a href="/form/post_type">เพิ่มหัวข้อข่าวสาร</a></li></button>

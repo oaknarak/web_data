@@ -9,6 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$post->header}}</h5>
                         <p class="detail-content ellipsis card-content-detail ">{{$post->post_type->type}}</p>
+                        <p class="detail-content ellipsis card-content-detail ">ผู้โพสต์: {{$post->user->name}}</p>
                         <a href="/detail/post/{{$post->id}}" class="btn btn-primary">ดูเพิ่มเติม</a>
                         <a href="/edit/post/{{$post->id}}" class="btn btn-warning">แก้ไข</a>
                         <a href="/delete/post/{{$post->id}}" class="btn btn-danger" onclick="return confirm('คุณแน่ใจหรือไม่ว่าต้องการลบโพสต์')">ลบ</a>

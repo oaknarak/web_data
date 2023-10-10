@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Form_to_adopt;
 use App\Models\Form_to_adoptPet;
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\Post_type;
 use App\Models\Post;
 use App\Models\Pet;
 use App\Models\User;
 
-class adminController extends Controller
+class AdminController extends Controller
 {
     public function index(){
         $posts=Post::orderBy('created_at', 'desc')->get();
@@ -87,6 +88,7 @@ class adminController extends Controller
         $request->file('photo')->storeAs('public/Image/',$name);
         $new_post->photo = $name;
         $new_post->source = $request->source;
+        $new_post->admin_id = Auth::user()->id;
         $new_post->save();
         return redirect('/form/post')->with('success','โพสต์ข้อมูลข่าวสารสำเร็จ');
     }
@@ -152,7 +154,7 @@ class adminController extends Controller
         $post_adopt=Pet::findOrFail($id);
         $post_adopt->approve=1;
         $post_adopt->save();
-        return redirect('/approve');
+        return redirect('/approve')->with('success','อนุมัติโพสต์สำเร็จ');
     }
     public function approve_pet($id){
         $pet=Pet::findOrFail($id);

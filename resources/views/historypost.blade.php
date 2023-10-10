@@ -1,6 +1,15 @@
 @extends('layouts.master_user')
 @section('content')
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <div class="custom-menu-item-back">
+        <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+        <script>
+            document.getElementById("gotoPageButton").addEventListener("click", function() {
+                window.location.href = "http://127.0.0.1:8000/profile_user";
+            });
+        </script>
+    </div>
+    
 
     <div class="containerreq1">
         <h4>ประวัติการโพสต์</h4>
@@ -12,7 +21,7 @@
             <th>การอนุมัติ</th>
             <th>การทำงาน</th>
         </tr>
-        @foreach ($pets_history as $pet)
+        @forelse ($pets_history as $pet)
             <tr>
                 <td>{{ $pet->name }}</td>
                 <td>
@@ -38,9 +47,16 @@
                     </form>
                 </td>
             </tr>
-        @endforeach
+        @empty
+            <td colspan="5">ไม่มีข้อมูล</td>    
+        @endforelse
     </table>
+    
     </div>
+    <div class="custom-div2" >
+        <div class="colorinimg">
+            
+        </div>
     </div>
 
    

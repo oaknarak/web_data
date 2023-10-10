@@ -16,9 +16,9 @@ class AdminCheck
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->email === 'admin@admin.com') {
-            return $next($request);
+        if (Auth::check() && Auth::user()->Isadmin == 1) {
+            return redirect('/home_admin');
         }
-        return redirect()->back(); // หรืออื่น ๆ ตามที่คุณต้องการ
+        return redirect()->back(); 
     }
 }

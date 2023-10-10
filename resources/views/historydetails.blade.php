@@ -2,6 +2,14 @@
 @section('content')
     <link rel="stylesheet" href="{{asset('styles/inkgo.css')}}">
     <form action="/historypost/details" method="get">
+        <div class="custom-menu-item-back">
+            <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+            <script>
+                document.getElementById("gotoPageButton").addEventListener("click", function() {
+                    window.location.href = "http://127.0.0.1:8000/historypost";
+                });
+            </script>
+        </div>
         <div class="custom-div22" >
     
             <div class ="containner4">
@@ -19,6 +27,11 @@
                      @if ($pet->gender =='M')ผู้
                     @else เมีย
                     @endif </p>
+                    @if($pet->type == "dog")
+                        <p><b>ประเภทของสัตว์ : </b>สุนัข</p>
+                    @else
+                        <p><b>ประเภทของสัตว์ : </b>แมว</p>
+                    @endif
                     <p><b>สี : </b>{{$pet->color}}</p>
                     <p><b>น้ำหนัก : </b>{{$pet->weight}} กิโลกรัม</p>
                     <p><b>รายละเอียดเพิ่มเติม : </b>{{$pet->detail}}</p>

@@ -18,6 +18,11 @@
          @if ($dog->gender =='M')ผู้
         @else เมีย
         @endif </p>
+        @if($dog->type == "dog")
+                        <p><b>ประเภทของสัตว์ : </b>สุนัข</p>
+                    @else
+                        <p><b>ประเภทของสัตว์ : </b>แมว</p>
+                    @endif
         <p><b>สี : </b>{{$dog->color}}</p>
         <p><b>น้ำหนัก : </b>{{$dog->weight}} กิโลกรัม</p>
         <p><b>รายละเอียดเพิ่มเติม : </b>{{$dog->detail}}</p>

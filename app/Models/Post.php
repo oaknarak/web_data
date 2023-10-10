@@ -14,4 +14,7 @@ class Post extends Model
     public function post_type(){
         return $this->belongsTo(Post_type::class);
     }
+    public function user(){
+        return $this->belongsTo(User::class,'admin_id');
+    }
 }

@@ -13,7 +13,7 @@
                 </div>
             @endif
             <div class="h4 text-center">แก้ไขโพสต์</div>
-            <form action="/update/post/{{$post->id}}" method="post" enctype="multipart/form-data" class="needs-validation">
+            <form action="/update/post/{{$post->id}}" method="post" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="mb-3">
                     <label for="type" class="form-label">ประเภทข่าวสาร: </label>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="photo" class="form-label">รูปภาพประกอบ: </label>
-                    <input type="file" name="photo" class="form-control" id="image-input" >
+                    <input type="file" name="photo" class="form-control" id="image-input" accept="image/jpeg, image/png">
                 </div>
                 <div class="mb-3">
                     <div class="text-center">

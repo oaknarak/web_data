@@ -26,6 +26,7 @@ return new class extends Migration
             $table->longText('detail')->nullable();
             $table->binary('home_photo')->nullable();
             $table->string('phone_number')->nullable();
+            $table->integer('Isadmin')->default('0');
             $table->timestamps();
         });
     }

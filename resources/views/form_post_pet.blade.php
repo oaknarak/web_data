@@ -19,7 +19,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/create/post/pet" method="post" enctype="multipart/form-data" class="needs-validation">
+            <form action="/create/post/pet" method="post" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="row">
                     <div class="col">
@@ -95,7 +95,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="pet_photo" class="form-label">รูปภาพประกอบ : </label>
-                            <input type="file" name="pet_photo" id="image-input" class="form-control" required>
+                            <input type="file" name="pet_photo" id="image-input" class="form-control" required accept="image/jpeg, image/png">
                         </div>
                         <div class="mb-3">
                             <div class="text-center">

@@ -27,6 +27,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'Isadmin'
     ];
 
     /**
@@ -63,5 +64,8 @@ class User extends Authenticatable
     }
     public function pets(){
         return $this->hasMany(Pet::class);
+    }
+    public function posts(){
+        return $this->hasMany(Post::class);
     }
 }

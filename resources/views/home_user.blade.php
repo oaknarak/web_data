@@ -27,17 +27,22 @@
                 });
             </script>
         </div>
-        <div class="custom-menu-item help">
-            <button class="btn btn-primary"><a href="/form/post/pet">โพสต์หาบ้านให้สัตว์</a></button>
-        </div> 
         <div class="custom-menu-item item2">
-            <button id="gotoPageButton3" class="btn btn-outline-dark">หาบ้านให้สัตว์</button>
+            <button id="gotoPageButton3" class="btn btn-outline-dark">รับอุปการะสัตว์</button>
             <script>
                 document.getElementById("gotoPageButton3").addEventListener("click", function() {
-                window.location.href = "http://127.0.0.1:8000/findhome/dog"; // เปลี่ยน URL เป็น URL ของหน้าที่คุณต้องการไป
+                window.location.href = "http://127.0.0.1:8000/findhome/dog"; 
                 });
             </script>
         </div>
+        <div class="custom-menu-item help">
+            <button id="gotoPageButton8" class="btn btn-outline-dark">โพสต์หาบ้านให้สัตว์</button>
+            <script>
+                document.getElementById("gotoPageButton8").addEventListener("click", function() {
+                window.location.href = "http://127.0.0.1:8000/form/post/pet"; 
+                });
+            </script>
+        </div>  
        
     </div>
 

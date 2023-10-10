@@ -1,9 +1,18 @@
 @extends('layouts.master_user')
 @section('content')
+
+<div class="custom-menu-item-back">
+    <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+    <script>
+        document.getElementById("gotoPageButton").addEventListener("click", function() {
+            window.location.href = "http://127.0.0.1:8000/profile_user";
+        });
+    </script>
+</div>
+
     <div class="containerreq1">
         <h4>คำขอรับเลี้ยง</h4>
         <table>
-      
             <tr>
                 <th>ชื่อสัตว์เลี้ยง</th>
                 <th>ชื่อคนที่ต้องการรับเลี้ยง</th>
@@ -40,11 +49,12 @@
                             </button>
                         @endif
                     </td>
-    
                 </tr>  
             @endif
-    
             @empty
+                <tr>
+                    <td colspan="10">ไม่มีข้อมูล</td>
+                </tr>
             @endforelse
               
         </table>
@@ -54,7 +64,7 @@
                 <th>ชื่อสัตว์เลี้ยง</th>
                 <th>ชื่อคนที่รับเลี้ยง</th>
             </tr>
-                @foreach ( $user_requests as $user_request) 
+                @forelse ( $user_requests as $user_request) 
                 @if ($user_request->pet->user->id == Auth::user()->id)
                  @if($user_request->selected==1)
                     <tr>
@@ -64,8 +74,15 @@
                 @endif
                 
             @endif
-            @endforeach
+            @empty
+            <td colspan="5">ไม่มีข้อมูล</td>    
+        @endforelse
         </table>
+    </div>
+    <div class="custom-div2" >
+        <div class="colorinimg">
+            
+        </div>
     </div>
     
    

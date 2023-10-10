@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Pet;
 use Illuminate\Support\Facades\Auth;
-class userController extends Controller
+class UserController extends Controller
 {
     public function index(){
         $news_posts=Post::orderBy('created_at', 'desc')->get();
@@ -46,7 +46,7 @@ class userController extends Controller
         $new_pet->vacine = $request->vacine;
         $new_pet->user_id = Auth::user()->id;
         $new_pet->save();
-        return redirect('/form/post/pet')->with('success','โพสต์ข้อมูลข่าวสารสำเร็จ');
+        return redirect('/form/post/pet')->with('success','โพสต์หาบ้านสำเร็จ');
     }
     public function profile(){
         return view('profile_user');
@@ -141,7 +141,7 @@ class userController extends Controller
         return redirect('/adopt_request');
     }
     public function  success_adopt(){
-        $show=PetUser::where('adopt_id','=',Auth::user()->id)->where('selected','=',1)->get();
+        $show=PetUser::where('adopt_id','=',Auth::user()->id)->get();
         return view('success_adopt',compact('show'));
     }
 

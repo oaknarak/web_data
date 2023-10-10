@@ -19,6 +19,8 @@ return new class extends Migration
             $table->longText('detail');
             $table->binary('photo');
             $table->string('source');
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

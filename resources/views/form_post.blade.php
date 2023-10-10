@@ -1,5 +1,13 @@
 @extends('layouts.master')
 @section('content')
+<div class="custom-menu-item-back">
+    <button type="submit" id="gotoPageButton" class="btn btn-outline-dark">กลับไปก่อนหน้า</button>
+    <script>
+        document.getElementById("gotoPageButton").addEventListener("click", function() {
+            window.location.href = "http://127.0.0.1:8000/profile";
+        });
+    </script>
+</div>
     <div class="row pt-2 mx-5">
         <div class="col-12">
             <div class="h4 text-center">โพสต์ข้อมูลข่าวสาร</div>
@@ -19,7 +27,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/create/post" method="post" enctype="multipart/form-data" class="needs-validation">
+            <form action="/create/post" method="post" enctype="multipart/form-data" autocomplete="off">
                 @csrf
                 <div class="mb-3">
                     <label for="type" class="form-label">ประเภทข่าวสาร: </label>
@@ -40,7 +48,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="photo" class="form-label">รูปภาพประกอบ: </label>
-                    <input type="file" name="photo" class="form-control" id="image-input" required>
+                    <input type="file" name="photo" class="form-control" id="image-input" required accept="image/jpeg, image/png">
                 </div>
                 <div class="mb-3">
                     <div class="text-center">
@@ -66,7 +74,7 @@
                     </script>
                 <div class="mb-3">
                    <label for="source" class="form-label">ที่มา: </label>
-                    <input type="text" name="source" required class="form-control">
+                    <input type="text" name="source" required class="form-control" >
                 </div>
                 <div class="mb-3">
                    <button type="submit" class="btn btn-primary">เพิ่มข่าวสาร</button> 

@@ -1,7 +1,9 @@
 * {
     font-family: 'Sarabun', sans-serif;
 }
-
+body {
+    overflow-x: hidden;
+}
 .custom-div2 {
     width: 100%;
     background-color: rgba(255, 205, 0, 1.0);
@@ -17,21 +19,44 @@
 .custom-menu {
     margin-top: 300px;
     margin-left: 250px;
-   
 }
 
 .custom-menu-item {
-    display: inline-block;
+    display: block;
     margin-top: 10px;
+    clear: both; 
 }
-.help {
-    float: right;
-    margin-right: 200px;
+
+.help,
+.item2,
+.item1 {
+    float: none;
 }
-.item2{
-  float: left;
-  clear: both;
+
+.custom-menu-item-dog,
+.custom-menu-item-cat {
+    display: inline-block;
+    align-items: center;
 }
+
+.custom-menu-item-dog {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.custom-menu-item-cat {
+    margin-right: 20px;
+}
+
+.custom-menu-item-back{
+    display: block;
+    margin-top: 30px;
+    clear: both; 
+    margin-left: 20px;
+}
+
+
+
 .custom-card {
     width: 100%;
     max-width: 300px;
@@ -74,7 +99,6 @@
     width: 100%;
     margin-top: 50px;
 }
-
 
 .right-align-text {
     text-align: right;
@@ -145,6 +169,7 @@
 }
 
 .news {
+    margin-top: 40px;
     clear: left;
     text-align: center;
   
@@ -364,13 +389,6 @@ a button {
 .d-flex{
     margin-left: 350px;
 }
-.custom-menu-item-dog{
-    margin-left: 450px;
-}
-.custom-menu-item-cat{
-    margin-left: 500px;
-    margin-top: -37px;
-}
 .container-fluid img{
     height: 70px;
     width: 70px;
@@ -529,12 +547,12 @@ hr{
 
 .containerreq1{
    
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(247, 244, 175);
     width: 1200px;
     height: 450px auto;
     margin-left: 200px;
     margin-top: 70px;
-    border: 1px solid rgb(11, 11, 11);
+    border: 1px solid rgb(247, 244, 175);
     border-radius: 10px;
     
    
@@ -544,6 +562,7 @@ hr{
     margin-left: 40px;
     margin-top: 20px;
     align-items: center;
+    
     
 
 }
@@ -573,7 +592,7 @@ table {
 
 
 .containerreq1 tr:nth-child(odd) {
-    background-color: #c2c2c2;
+    background-color: #dfdfdf;
     height: 50px;
    
 }
@@ -666,8 +685,8 @@ table {
     margin-top: 500px;
     height: 300px;
     display: grid;
-    grid-template-columns: auto auto auto ; /* สร้างคอลัมน์สองคอลัมน์ โลโก้และเนื้อหา */
-    gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+    grid-template-columns: auto auto auto ;
+    gap: 20px; 
     align-items: center;
     height: fit-content;
     width: auto;

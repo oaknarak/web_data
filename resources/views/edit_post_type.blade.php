@@ -14,7 +14,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/update/post_type/{{$post_type->id}}" method="post">
+            <form action="/update/post_type/{{$post_type->id}}" method="post" autocomplete="off">
                 @csrf
                 <label for="type" class="form-label">หัวข้อข่าวสาร: </label>
                 <input type="text" name='type' class="form-control" value="{{$post_type->type}}" required><br>

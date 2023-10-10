@@ -18,8 +18,10 @@
                  <td>{{$user_request->pet->name}}</td>
                 <td>{{$user_request->user->name}}</td>
             </tr>
+            
             @endforeach
 
     </table>
+    
 </body>
 </html>
