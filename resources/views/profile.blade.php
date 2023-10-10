@@ -10,11 +10,11 @@
                 <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();"> <button class="btn btn-danger">{{ __('ออกจากระบบ') }}</button>
-    
+
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none; ">
                     @csrf
                 </form>
-    
+
                 </a>
             </ul>
             {{-- <button type="submit"><a href="/form/post"></a></button>

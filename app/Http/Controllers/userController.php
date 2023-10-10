@@ -75,7 +75,7 @@ class UserController extends Controller
         }
         $new_form_adopt->detail = $request->detail;
         $new_form_adopt->save();
-        return redirect('/profile_user')->with('success_address','บันทึกข้อมูลสำเร็จ'); 
+        return redirect('/profile_user')->with('success_address','บันทึกข้อมูลสำเร็จ');
     }
     public function adopt($pet_id){
         if(Auth::user()->address==null and Auth::user()->phone_number==null and Auth::user()->home_photo==null){
@@ -131,13 +131,13 @@ class UserController extends Controller
         if ($selectedPet) {
             $selectedPet->selected = 1;
             $selectedPet->save();
-            
+
             PetUser::where('adopt_id', '!=', $show)->where('pet_id',"=",$show1)->delete();
             $status=Pet::findOrFail($show1);
             $status->status=1;
             $status->save();
         }
-        
+
         return redirect('/adopt_request');
     }
     public function  success_adopt(){
@@ -158,6 +158,6 @@ class UserController extends Controller
         PetUser::where('pet_id','=',$id)->delete();
         return redirect('/historypost');
     }
-    
-    
+
+
 }
