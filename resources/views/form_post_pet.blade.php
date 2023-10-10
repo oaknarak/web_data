@@ -19,7 +19,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/create/post/pet" method="post" enctype="multipart/form-data" autocomplete="off">
+            <form action="/create/post/pet" method="post" enctype="multipart/form-data" autocomplete="off" class="petpost">
                 @csrf
                 <div class="row">
                     <div class="col">
@@ -121,9 +121,16 @@
                             });
                         });
                     </script>
-                <button type="submit" class="btn btn-primary">ส่งคำขอ</button> 
+                
                 </div>
+                <button type="submit" class="btn btn-warning">ส่งคำขอ</button>
+                 <style>
+                    .btn-warning{
+                        width: 105px;
+                    }
+                 </style>
             </form>
         </div>
     </div>
+    
 @endsection

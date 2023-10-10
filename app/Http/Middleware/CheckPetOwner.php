@@ -19,7 +19,7 @@ class CheckPetOwner
     {
         $petId = $request->route('id');
         $pet = Pet::findOrFail($petId);
-        if (Auth::check() && Auth::user()->id !== $pet->user_id) {
+        if (auth()->check() && auth()->user()->id !== $pet->user_id) {
             return redirect()->back();
         }
 

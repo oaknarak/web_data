@@ -14,11 +14,12 @@ class AdminCheck
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->Isadmin == 1) {
-            return redirect('/home_admin');
+        if (Auth::check() && Auth::user()->Isadmin === 1) {
+            return $next($request);
         }
-        return redirect()->back(); 
+        return redirect('/home');
     }
+    
 }

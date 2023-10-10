@@ -54,7 +54,7 @@ Route::middleware([
 });
 
 Route::middleware(['admin'])->group(function () {
-    Route::get('/home_admin', [AdminController::class, 'index']);
+    Route::get('/home_admin', [AdminController::class, 'index'])->name('home_admin');
     Route::get('/form/post_type', [AdminController::class, 'form_post_type']);
     Route::post('/create/post_type', [AdminController::class, 'create_post_type']);
     Route::get('/detail/post_type/{id}', [AdminController::class, 'show_detail_post_type']);

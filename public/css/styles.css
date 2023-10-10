@@ -1,9 +1,11 @@
 * {
     font-family: 'Sarabun', sans-serif;
 }
+
 body {
     overflow-x: hidden;
 }
+
 .custom-div2 {
     width: 100%;
     background-color: rgba(255, 205, 0, 1.0);
@@ -14,8 +16,6 @@ body {
     margin-top: 30px;
 }
 
-
-
 .custom-menu {
     margin-top: 300px;
     margin-left: 250px;
@@ -24,7 +24,7 @@ body {
 .custom-menu-item {
     display: block;
     margin-top: 10px;
-    clear: both; 
+    clear: both;
 }
 
 .help,
@@ -48,14 +48,12 @@ body {
     margin-right: 20px;
 }
 
-.custom-menu-item-back{
+.custom-menu-item-back {
     display: block;
     margin-top: 30px;
-    clear: both; 
+    clear: both;
     margin-left: 20px;
 }
-
-
 
 .custom-card {
     width: 100%;
@@ -81,7 +79,6 @@ body {
 }
 
 .imgdog {
-    
     height: 40%;
     width: 45%;
     border-radius: 2%;
@@ -89,7 +86,8 @@ body {
     margin-top: -110px;
     margin-left: 10px;
 }
-.img{
+
+.img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +111,6 @@ body {
     margin-top: -110px;
 }
 
-
 .dog {
     margin-left: 700px;
     margin-top: 40px;
@@ -126,6 +123,7 @@ body {
     overflow: hidden;
     /* position: relative; */
 }
+
 
 /* .container-card {
     display: grid;
@@ -146,6 +144,8 @@ body {
     border-top-right-radius: 10px;
     object-fit: cover;
     /* object-position: center center; */
+
+
 /* } */
 
 .card-text li {
@@ -172,8 +172,6 @@ body {
     margin-top: 40px;
     clear: left;
     text-align: center;
-  
-  
 }
 
 .detail {
@@ -184,10 +182,12 @@ body {
     margin-left: 1000px;
     margin-top: 17px;
 }
-.login_text a{
+
+.login_text a {
     text-decoration: none;
     color: #000000;
 }
+
 
 /* .card-img-top img{
 
@@ -197,6 +197,7 @@ body {
     height: 150px;
     object-fit: cover;
 } */
+
 .imgsize {
     width: auto;
     height: 125px;
@@ -212,7 +213,8 @@ body {
     margin-left: 250px;
     margin-top: 50px;
     gap: 30px;
-}    
+}
+
 .card-text {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     flex-wrap: wrap;
@@ -225,18 +227,16 @@ body {
 
 .card-text h3 {
     font-size: 24px;
-    white-space: nowrap; 
+    white-space: nowrap;
     width: 300px;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     margin-top: 10px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .menu {
@@ -254,6 +254,7 @@ nav {
     margin-left: 30px;
 }
 
+
 /* .logo img {
     margin-left: 0px;
     width: 80px;
@@ -264,11 +265,7 @@ nav {
 
 .menu button {
     font-size: 18px;
-
     margin-left: 20px;
-
-
-
 }
 
 .menu a {
@@ -280,9 +277,6 @@ nav {
     margin-top: 20px;
     margin-left: 20px;
     display: flex;
-
-
-
 }
 
 .infomember h3 {
@@ -294,7 +288,6 @@ nav {
     margin-left: -50px;
 }
 
-
 .edit {
     position: relative;
     /* margin-top: 60px;
@@ -304,7 +297,6 @@ nav {
 }
 
 .container2 {
-
     margin-top: 25px;
     display: flex;
     margin-left: 210px;
@@ -318,20 +310,17 @@ nav {
     margin-left: 250px;
     width: 1000px;
     height: 650px;
-
 }
 
 .container2 img {
     width: 20px;
     height: 20px;
-
 }
 
 .container2 label {
     margin-top: 17px;
     margin-left: 20px;
     margin-right: 20px;
-
 }
 
 .container2 input {
@@ -339,20 +328,15 @@ nav {
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
-
-
 }
 
 .address {
-
     margin-top: -240px;
     margin-left: 450px;
 }
 
 .form {
     margin-left: 80px;
-
-
 }
 
 .content {
@@ -360,19 +344,11 @@ nav {
     height: 140px;
     position: relative;
     margin-top: 60px;
-
-
-
-
-
 }
-
 
 .address input {
     margin-right: 100px;
 }
-
-
 
 nav p {
     font-size: 20px;
@@ -380,22 +356,20 @@ nav p {
     margin-top: -55px;
 }
 
-
-
 a button {
     margin-left: 1120px;
-
 }
-.d-flex{
+
+.d-flex {
     margin-left: 350px;
 }
-.container-fluid img{
+
+.container-fluid img {
     height: 70px;
     width: 70px;
-
 }
 
-.nameweb{
+.nameweb {
     text-decoration: none;
     color: black;
     margin-left: -40px;
@@ -407,105 +381,91 @@ a button {
     margin-top: 3px;
 }
 
-
 .Salary {
     margin-left: 450px;
-
 }
-.Brithday{
+
+.Brithday {
     margin-left: 450px;
-
 }
 
-.phone{
+.phone {
     margin-left: 80px;
 }
 
-.envi{
+.envi {
     margin-left: 470px;
     margin-top: -110px;
 }
 
-.envi img{
+.envi img {
     width: 200px;
     height: 100px;
-
 }
 
-.envi input{
+.envi input {
     margin-left: 15px;
     margin-top: -20px;
 }
 
-
-.detail{
+.detail {
     margin-left: 80px;
     margin-top: -75px;
-
 }
 
-.detail textarea{
+.detail textarea {
     margin-top: 8px;
 }
-input{
+
+input {
     text-indent: 0.5em;
 }
 
-.form-check input{
+.form-check input {
     width: 20px;
     height: 20px;
     position: absolute;
     left: 270px;
     top: 513px;
-    
-    
-    
 }
 
-.form-check label{
+.form-check label {
     margin-top: -140px;
     margin-left: 200px;
-    
     top: 100px;
 }
 
-.form-check{
+.form-check {
     margin-left: 50px;
 }
 
 .h4 {
     box-shadow: inset;
     padding: 5px;
-    
-
 }
 
-.btnadopt{
+.btnadopt {
     margin-left: 320px
 }
 
-
-.row{
+.row {
     padding: 25px;
 }
 
-.col-12{
+.col-12 {
     padding: 5px;
     align-items: center;
 }
-.imgpost{
+
+.imgpost {
     width: 200px;
     height: auto;
     margin: auto;
-
 }
 
-
-
-
-.containner4{
+.containner4 {
     background-color: #FFFF;
-    width:500px;
+    width: 500px;
     margin: 0 auto;
     border: 1px solid black;
     padding: 5px;
@@ -513,25 +473,25 @@ input{
     box-shadow: 0px 2px 1px lightgray;
 }
 
-.text{
+.text {
     margin-top: -40px;
     margin-left: auto;
     margin-right: auto;
 }
 
-hr{
+hr {
     border-bottom: 1px solid black;
     box-shadow: 2px 2px 0px lightgray;
 }
 
-.detailspost{
+.detailspost {
     margin: 0 auto auto 0;
 }
+
 .dt {
     padding: 0;
     margin: 0 13px;
 }
-
 
 .custom-div22 {
     display: flex;
@@ -544,9 +504,7 @@ hr{
     margin-top: 350px;
 }
 
-
-.containerreq1{
-   
+.containerreq1 {
     background-color: rgb(247, 244, 175);
     width: 1200px;
     height: 450px auto;
@@ -554,17 +512,12 @@ hr{
     margin-top: 70px;
     border: 1px solid rgb(247, 244, 175);
     border-radius: 10px;
-    
-   
 }
 
 .containerreq1 table {
     margin-left: 40px;
     margin-top: 20px;
     align-items: center;
-    
-    
-
 }
 
 table {
@@ -576,101 +529,95 @@ table {
     text-align: center;
 }
 
-.containerreq1 th, td {
+.containerreq1 th,
+td {
     border: 1px solid #000000;
     left: 10%;
     width: 200px;
-    
 }
+
 .containerreq1 tr:nth-child(even) {
     background-color: rgb(255, 255, 255);
     height: 50px;
     width: 50px;
-    
 }
-
-
 
 .containerreq1 tr:nth-child(odd) {
     background-color: #dfdfdf;
     height: 50px;
-   
 }
-.containerreq1  a{
+
+.containerreq1 a {
     text-decoration: none;
     color: black;
 }
+
 .containerreq1 table {
     width: 770px;
 }
+
 .containerreq1 h5 {
-   
     text-align: center;
     margin-top: 20px;
-   
 }
 
 .containerreq1 h4 {
     text-align: center;
     margin-top: 20px;
-
-   
 }
 
-
-.foot{
-    background-color:rgba(255, 205, 0, 1.0);
+.foot {
+    background-color: rgba(255, 205, 0, 1.0);
     margin-top: 30px;
     height: 100px;
 }
-.foot h4{
+
+.foot h4 {
     margin-left: 600px;
 }
-.table1{
+
+.table1 {
     margin-bottom: 20px;
 }
-
-
 
 .containerhis {
     background-color: rgb(249, 249, 249);
     border: 1px solid black;
     border-radius: 20px;
     width: 500px;
-    height: 500px auto ;
+    height: 500px auto;
     margin-left: 500px;
     margin-top: 10px;
-    
-   
 }
-
 
 .containerhis table {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.hiss h4{
+.hiss h4 {
     margin-left: 660px;
     margin-top: 40px;
 }
 
-.table1 a{
-   text-decoration: underline;
+.table1 a {
+    text-decoration: underline;
 }
 
-.btn-success a{
+.btn-success a {
     color: #FFFAF6;
 }
-.btn-primary a{
+
+.btn-primary a {
     color: #FFFAF6;
     text-decoration: none;
 }
-.containerreq1 table{
+
+.containerreq1 table {
     width: 1120px;
 }
 
-  .imgsizenews {
+.imgsizenews {
     width: auto;
     height: 170px;
     object-fit: cover;
@@ -681,16 +628,15 @@ table {
 }
 
 .container3 {
-    background-color:rgba(255, 205, 0, 1.0);
+    background-color: rgba(255, 205, 0, 1.0);
     margin-top: 500px;
     height: 300px;
     display: grid;
-    grid-template-columns: auto auto auto ;
-    gap: 20px; 
+    grid-template-columns: auto auto auto;
+    gap: 20px;
     align-items: center;
     height: fit-content;
     width: auto;
-
 }
 
 .container3 p {
@@ -702,47 +648,66 @@ table {
 footer {
     align-items: center;
     color: rgb(0, 0, 0);
-    
-  }
+}
 
 
-  /* .container3 img {
+/* .container3 img {
     height: auto;
   } */
 
-  .infoprofile{
-    margin:25px;
+.infoprofile {
+    margin: 25px;
 }
 
-
-  .infoprofile small{
-
+.infoprofile small {
     margin: 5px 0;
-  }
-  .infoprofile2 small {
-    margin: 5px 0;
-  }
+}
 
-  .infoprofile small{
+.infoprofile2 small {
+    margin: 5px 0;
+}
+
+.infoprofile small {
     margin: 5px 0;
     text-align: left;
-  }
-  .infoprofile2 small {
+}
+
+.infoprofile2 small {
     margin: 5px 0;
     /* text-align: left; */
-  }
+}
 
-  .aboutusprofile {
+.aboutusprofile {
     margin: 10px;
-   width: 600px;
+    width: 600px;
 }
 
 
+/* สีพื้นหลังเหลืองอ่อน */
 
 
+/* สีข้อความเหลืองอ่อน */
 
 
+/* .label {
+    color: #ffcc00;
+    /* หรือ color: rgb(255, 204, 0); */
 
 
-
-  
+}
+*/
+/* สีปุ่มเหลืองอ่อน */
+.petpost input {
+    border: 1px solid;
+}
+.petpost select {
+    border: 1px solid;
+}
+.petpost textarea {
+    border: 1px solid;
+}
+.petpost {
+    background-color: #f9e48f;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

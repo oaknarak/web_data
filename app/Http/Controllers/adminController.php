@@ -13,6 +13,9 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
+    // public function show(){
+    //     return view('/home_admin');
+    // }
     public function index(){
         $posts=Post::orderBy('created_at', 'desc')->get();
         return view('home_admin',compact('posts'));
@@ -88,7 +91,7 @@ class AdminController extends Controller
         $request->file('photo')->storeAs('public/Image/',$name);
         $new_post->photo = $name;
         $new_post->source = $request->source;
-        $new_post->admin_id = Auth::user()->id;
+        $new_post->admin_id = auth()->user()->id;
         $new_post->save();
         return redirect('/form/post')->with('success','โพสต์ข้อมูลข่าวสารสำเร็จ');
     }
