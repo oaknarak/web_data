@@ -14,7 +14,10 @@
     <table class ="table1">
         <tr>
             <th>ชื่อสัตว์เลี้ยง</th>
-            <th>ชื่อเจ้าของสัตว์เลี้ยง</th>
+            <th>ชื่อเจ้าของสัตว์เลี้ยง(คนเก่า)</th>
+            <th>เบอร์โทรศัพท์เจ้าของคนเก่า</th>
+            <th>รูปสัตว์</th>
+            <th>พันธุ์สัตว์</th>
             <th>สถานะ</th>
         </tr>
        
@@ -23,6 +26,9 @@
             <tr>
                  <td>{{$successadopt->pet->name}}</td>
                 <td>{{$successadopt->pet->user->name}}</td>
+                <td>{{$successadopt->pet->user->phone_number}}</td>
+                <td> <img class="imgsize" src="{{asset('storage/Image/'.$successadopt->pet->pet_photo)}}" width="200px" height="80px"></td>
+                <td>{{$successadopt->pet->species}}</td>
                 @if ($successadopt->selected == 1)
                 <td>รับเลี้ยงสำเร็จ</td>
                 @else
