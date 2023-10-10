@@ -36,7 +36,7 @@
                 @endif
             </tr>
             @empty
-            <td colspan="5">ไม่มีข้อมูล</td>    
+            <td colspan="6">ไม่มีข้อมูล</td>    
         @endforelse
     </table>
     
