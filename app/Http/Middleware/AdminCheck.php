@@ -17,7 +17,7 @@ class AdminCheck
     public function handle($request, Closure $next)
     {
         if (Auth::check() && Auth::user()->Isadmin == 1) {
-            return redirect('/home_admin');
+            return $next($request);
         }
         return redirect()->back(); 
     }
